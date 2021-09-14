@@ -14,5 +14,5 @@ Sperate name, email and attachements with commas only.
 Write your mail body template.
 Run the mail.py file via python.
 
-## Comtact
+## Contact
 mailto:keremardicli@gmail.com
