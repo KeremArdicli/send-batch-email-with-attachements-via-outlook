@@ -1,5 +1,5 @@
 # Send batch email with attachements via MS Outlook
-Send batch personalized emails to your recepients with personalized attachements.
+Send batch personalized emails to your recepients with personalized attachements using Python...
 
 This small python app will let you send personalized emails with personalized attachements to your recepient list.
 
