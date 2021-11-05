@@ -6,14 +6,14 @@ with open('mailbody.html', 'r', encoding='utf-8') as f:     # prepare an html fi
     html_string = f.read() 
     
 template = html_string 
-# template = "{} , Mail body here."  ---------------- to use plain text activa this line and deactive the line above.
+# template = "{} , Mail body here."  ---------------- to use plain text activate this line and deactivate the line above.
 
 with open('people.csv', 'r', newline='') as f:
      reader = csv.reader(f)
      distro = [row for row in reader]
 
 
-chunks = [distro[x:x+4] for x in range (0, len(distro), 4)]
+chunks = [distro[x:x+4] for x in range (0, len(distro), 4)]   #change the numbers in this line according to the number of rows in your csv file. for eg: if you have 20 people, change 4s to 20.
 outlook = client.Dispatch('Outlook.Application')
 
 for chunk in chunks:
