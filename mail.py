@@ -2,7 +2,11 @@ import csv
 from time import sleep
 import win32com.client as client
 
-template = "{} , Mail body here." # you can use html templates as well
+with open('mailbody.html', 'r', encoding='utf-8') as f:     # prepare an html file named mailbody.htm and but it in the same directory.
+    html_string = f.read() 
+    
+template = html_string 
+# template = "{} , Mail body here."  ---------------- to use plain text activa this line and deactive the line above.
 
 with open('people.csv', 'r', newline='') as f:
      reader = csv.reader(f)
