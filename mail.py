@@ -17,7 +17,7 @@ for chunk in chunks:
         message = outlook.CreateItem(0)
         message.To = email
         message.Subject = "Mail Subject Here"
-        message.Body = template.format(name)
+        message.Body = template.format(name) # for html templates, change this line to "message.HTMLBody = template"
         attachement = attach
         message.Attachments.Add(attachement)
         message.Send()
