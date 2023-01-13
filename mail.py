@@ -17,6 +17,8 @@ f= open("report.txt","w+")
 chunks = [distro[x:x+4] for x in range (0, len(distro), 4)]  # 2 people per chunk
 outlook = client.Dispatch('Outlook.Application')
 
+i = 1
+
 for chunk in chunks:
     for name, email, attach in chunk:
         try:
@@ -29,8 +31,11 @@ for chunk in chunks:
             attachement = attach
             message.Attachments.Add(attachement)
             message.Send()
+            i += 1
         except:
             print("Mail could not sent to: ", name)
             f.write("Mail could not sent to: " + name + "\n")
     sleep(3)
+    
+f.write(str(i) + " e-mails has been sent..")
 f.close()
